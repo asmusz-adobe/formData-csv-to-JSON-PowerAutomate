@@ -6,7 +6,7 @@ One of the issues we currently have is that the [GET /agreements/{{agreement-ID}
 
  I borrowed most of the conversion code from an article by Manuel Gomes I found [here](https://manueltgomes.com/microsoft/powerautomate/how-to-parse-csv-file/). He also was kind enough to zip up his Flow and made it available [here](https://manueltgomes.com/wp-content/uploads/2020/08/ParseCSVfromOneDrive_20200803163228.zip). 
 
-I added an HTTP "request-reciever" trigger at the beginning where you pass the Adobe Sign "agreement ID" and the sender's email address as these are needed for the API call to get the form data.  You'll need to set the "shard", and the apiToken (here I recommend getting an integration key for your account), but that's about it.  It will handle any "commas" in your field-data and so far it has tested well. 
+I added an HTTP "request-reciever" trigger at the beginning where you pass the Adobe Sign "agreement ID" and the sender's email address as these are needed for the API call to get the form data.  You'll need to set the "shard", and the apiToken (here I recommend [getting an integration key](https://helpx.adobe.com/sign/kb/how-to-create-an-integration-key.html) for your account), but that's about it.  It will handle any "commas" in your field-data and so far it has tested well. 
 
 Once you've set the shard, and apiToken vars in the Flow itself, you should be able to pass it the "senderEmail", and the "agreementID" like this:
 
@@ -41,4 +41,4 @@ It will get the csv form-data, convert it to JSON and return a nice response som
 
 The zip for my Flow can be downloaded [here](https://github.com/asmusz-adobe/formData-csv-to-JSON-PowerAutomate/raw/main/GetAdobeSignagreementformdataasJSON_20201020010137.zip).
 
-Download it, set the cariables for your Adobe Sign accont and give it a try!
+Download it, set the variables for your Adobe Sign accont and give it a try!
